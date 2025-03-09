@@ -1,4 +1,4 @@
-public static class TimetableParser
+public static class Parser
 {
     public static DaySchedule ParseDaySchedule(HtmlNode dayRow)
     {

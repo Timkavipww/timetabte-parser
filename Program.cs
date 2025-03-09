@@ -1,4 +1,4 @@
-﻿SemaphoreSlim semaphoreRequest = new(4);
+﻿SemaphoreSlim semaphoreRequest = new(3);
 SemaphoreSlim semaphoreFile = new(1);
 
 Directory.CreateDirectory("Schledues");

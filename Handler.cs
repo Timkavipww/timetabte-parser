@@ -1,4 +1,3 @@
-using System.Text.Encodings.Web;
 
 public static class Handler
 {
@@ -14,7 +13,7 @@ public static class Handler
             using (IWebDriver driver = new ChromeDriver())
             {
                 driver.Navigate().GoToUrl(url);
-
+                Thread.Sleep(4000);
                 string html = driver.PageSource;
                 driver.Quit();
                 driver.Dispose();
@@ -40,7 +39,7 @@ public static class Handler
 
                 foreach (var dayRow in dayRows)
                 {
-                    var daySchedule = TimetableParser.ParseDaySchedule(dayRow);
+                    var daySchedule = Parser.ParseDaySchedule(dayRow);
                     allDays.Add(daySchedule);
                 }
                 var options = new JsonSerializerOptions
