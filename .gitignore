@@ -1,0 +1,8 @@
+.venv
+.vscode
+bin
+obj
+bin
+Schledues
+*.sln
+*.csproj
